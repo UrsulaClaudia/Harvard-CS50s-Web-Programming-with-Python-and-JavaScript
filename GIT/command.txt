@@ -1,0 +1,14 @@
+git clone url
+echo. > hello.html
+git add hello.html
+git commit -m "Add hello.html"
+git status
+git push
+git pull
+git commit -am "Add hello.html"
+git log
+git reset --hard <commit> || git reset --hard origin/master
+git branch
+git checkout branch
+git checkout -b branch
+git merge branch
