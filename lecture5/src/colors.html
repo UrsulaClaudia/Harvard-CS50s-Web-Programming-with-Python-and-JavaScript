@@ -3,23 +3,19 @@
     <head>
         <title>Colors</title>
         <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                document.querySelector("#red").onclick = function() {
-                    document.querySelector("#hello").style.color = 'red';
-                }
-                document.querySelector("#blue").onclick = function() {
-                    document.querySelector("#hello").style.color = 'blue';
-                }
-                document.querySelector("#green").onclick = function() {
-                    document.querySelector("#hello").style.color = 'green';
-                }
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = () => {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    }
+                });
             });
         </script>
     </head>
     <body>
-        <h1 id="hello">Hello!</h1>
-        <button id = "red">Red</button>
-        <button id = "blue">Blue</button>
-        <button id = "green">Green</button>
+        <h1 id = "hello">Hello!</h1>
+        <button data-color = "red">Red</button>
+        <button data-color = "blue">Blue</button>
+        <button data-color = "green">Green</button>
     </body>
 </html>
